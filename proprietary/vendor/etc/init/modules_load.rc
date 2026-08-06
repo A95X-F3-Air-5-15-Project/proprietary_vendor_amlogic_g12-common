@@ -1,0 +1,11 @@
+on early-init
+    write /sys/module/firmware_class/parameters/path "/vendor/lib/firmware/"
+    start modules_load
+
+service modules_load /vendor/bin/modules_load
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+

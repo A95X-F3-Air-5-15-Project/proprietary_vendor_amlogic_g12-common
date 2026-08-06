@@ -6,141 +6,187 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/amlogic/g12-common
 
 PRODUCT_COPY_FILES += \
-    vendor/amlogic/g12-common/proprietary/product/etc/permissions/privapp-permissions-atv-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-atv-product.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/auto_pairing.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/auto_pairing.conf \
     vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/blacklist.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/blacklist.conf \
     vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/bt_vendor_usb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_usb.conf \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-droidlogic.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.thermal@2.0-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@2.0-service.droidlogic.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.usb.gadget@1.2-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget@1.2-service.droidlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.audio.service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-droidlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.amlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.allocator-V2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-V2-service.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.composer@3.2-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@3.2-service.droidlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-service.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.tv.hdmi.cec-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tv.hdmi.cec-service.droidlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.tv.hdmi.connection-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tv.hdmi.connection-service.droidlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.usb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb-service.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.usb.gadget-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget-service.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/bluetooth.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/bluetooth.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/dumpstate-default.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dumpstate-default.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/dvb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dvb.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/fs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fs.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/irblaster1.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/irblaster1.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/memtrack-amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack-amlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/modules_load.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/modules_load.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/screencontrol.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/screencontrol.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/sysfs_permissions.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sysfs_permissions.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/systemcontrol.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/systemcontrol.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_hdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_hdcp.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_key_inject.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_key_inject.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_preload_fw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_preload_fw.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/thermal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/thermal.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller.txt \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller_2G.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller_2G.txt \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller_512M.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller_512M.txt \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
     vendor/amlogic/g12-common/proprietary/vendor/etc/permissions/android.software.cant_save_state.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.cant_save_state.xml \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/remote.cfg \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.tab1:$(TARGET_COPY_OUT_VENDOR)/etc/remote.tab1 \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.tab2:$(TARGET_COPY_OUT_VENDOR)/etc/remote.tab2 \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.tab3:$(TARGET_COPY_OUT_VENDOR)/etc/remote.tab3 \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/permissions/droidlogic.software.core.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/droidlogic.software.core.xml \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.txt:$(TARGET_COPY_OUT_VENDOR)/etc/remote.txt \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/resman.json:$(TARGET_COPY_OUT_VENDOR)/etc/resman.json \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/seccomp_policy/android.hardware.amlogic.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.amlogic.media.c2@1.2-extended-seccomp-policy \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/seccomp_policy/android.hardware.amlogic.media.c2@1.2-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.amlogic.media.c2@1.2-seccomp-policy \
     vendor/amlogic/g12-common/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     vendor/amlogic/g12-common/proprietary/vendor/etc/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     vendor/amlogic/g12-common/proprietary/vendor/etc/seccomp_policy/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
     vendor/amlogic/g12-common/proprietary/vendor/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
     vendor/amlogic/g12-common/proprietary/vendor/etc/wifi/p2p_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant.conf \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/regulatory.db:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/regulatory.db \
+    vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/regulatory.db.p7s:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/regulatory.db.p7s \
+    vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/video/h264_enc.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/h264_enc.bin \
+    vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/video/video_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/video_ucode.bin \
     vendor/amlogic/g12-common/proprietary/vendor_dlkm/lib/modules/amlogic_fbc_lib.ko:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/amlogic_fbc_lib.ko
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-resources-vendor \
-    android.hardware.graphics.composer@2.2-resources-vendor \
-    arm.graphics-V1-ndk_platform \
+    android.hardware.graphics.composer@2.1-resources-aidl \
+    android.hardware.graphics.composer@2.2-resources-aidl \
+    arm.graphics-V4-ndk \
+    arm.graphics-V5-ndk \
     libGLES_mali \
-    android.hardware.bluetooth@1.0-impl-droidlogic \
-    android.hardware.graphics.allocator@4.0-impl-arm \
+    android.hardware.graphics.allocator-V2-arm \
     android.hardware.graphics.mapper@4.0-impl-arm \
     audio.primary.amlogic \
     camera.amlogic \
-    hdmi_cec.amlogic \
     hwcomposer.amlogic \
+    mapper.arm \
     screen_source.amlogic \
     libAmlAudioOutPort \
-    libOmxAudio \
-    libOmxBase \
-    libOmxCore \
-    libOmxVideo \
-    libam_adp \
-    libamadec \
+    libPQTableLD \
+    libadap_lcd \
+    libadap_ld \
     libamaudioutils \
-    libamavutils \
     libamgralloc_ext \
+    libaml_hal_lcd \
+    libaml_hal_ld \
     libamladecs \
+    libamlaiaudio \
     libamlaudiohal.7.0 \
-    libamlaudiorc \
+    libamlaudiohal@7.0 \
+    libamlaudiohal_deathhandler@7.0 \
+    libamlmediautils@7.0 \
     libamlparser \
     libamlresampler \
     libamlspeed \
     libamltinyalsa \
-    libdatachunkqueue_alt \
+    libcodec2_aml_audio_decoder \
+    libcodec2_aml_soft_video_decoder \
+    libcodec2_aml_video_decoder \
+    libcodec2_aml_video_encoder \
     libdroidaudiospdif \
-    libdsm \
-    libdvbaudioutils \
     libfaad \
     libfbc \
-    libfpscalculator_alt \
-    libge2d \
-    libicuuc_vendor \
-    libispaaa \
+    libge2d-2.0 \
+    libhdmi_cec \
+    liblog_cout \
     libmad \
+    libmediahal_dmabufmanage \
+    libmediahal_hardware_demux \
     libmediahal_mediasync \
     libmediahal_passthrough \
     libmediahal_resman \
     libmediahal_tsplayer \
     libmediahal_tunnelrenderer \
     libmediahal_videodec \
+    libmediaproxy_consumer \
+    libmediaproxy_producer \
     libmemtrack-amlogic \
     libmeson_display_adapter_remote \
     libmeson_display_service \
+    libmeson_mode_policy \
     libms12api_v24 \
     libnano \
-    libomx_av_core_alt \
-    libomx_clock_utils_alt \
-    libomx_framework_alt \
-    libomx_timed_task_queue_alt \
-    libomx_worker_peer_alt \
     libpqcontrol \
+    libprovision \
+    libscreencontrol_jni \
+    libscreencontrolclient \
+    libscreencontrolservice \
     libsonic_ext \
-    libstagefrighthw \
     libsystemcontrolservice \
-    libthreadworker_alt \
+    libtee_load_video_fw \
+    libteec \
+    libvendor_c2common \
+    libvendor_c2componentstore \
     libvideotunnel \
-    libwvhidl \
-    libavl \
-    libbalance \
-    libdbx \
-    libhpeqwrapper \
-    libms12dapwrapper \
-    libsrswrapper \
-    libtreblebasswrapper \
-    libvirtualsurround \
-    libvirtualx \
+    libaudiopreprocessing \
+    libbundlewrapper \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libldnhncr \
+    libreverbwrapper \
+    libvisualizer \
     vendor.amlogic.display.meson_display_ipc@1.0 \
     vendor.amlogic.hardware.droidvold@1.0 \
+    vendor.amlogic.hardware.screencontrol@1.0 \
     vendor.amlogic.hardware.systemcontrol@1.0 \
     vendor.amlogic.hardware.systemcontrol@1.1 \
     vendor.amlogic.hardware.tvserver@1.0 \
-    Adt3LauncherCustomization \
-    android.hardware.dumpstate@1.1-service.droidlogic.xml \
-    android.hardware.graphics.composer@2.4-service.droidlogic.xml \
-    android.hardware.thermal@2.0-service.droidlogic.xml \
-    android.hardware.usb.gadget@1.2-service.droidlogic.xml \
-    manifest_android.hardware.drm@1.4-service.widevine.xml \
+    droidlogic.software.core \
+    android.hardware.gatekeeper-service.amlogic.xml \
+    android.hardware.graphics.composer@3.2-service.droidlogic.xml \
+    android.hardware.media.c2@1.2-service.xml \
+    android.hardware.tv.hdmi.cec-service.droidlogic.xml \
+    android.hardware.tv.hdmi.connection-service.droidlogic.xml \
+    android.hardware.usb-service.xml \
+    android.hardware.usb.gadget-service.xml \
+    dumpstate-default.droidlogic.xml \
+    manifest_allocator.xml \
+    manifest_mapper.xml \
+    mapper.arm.xml \
     memtrack-amlogic.xml \
-    DecInfo_test \
+    thermal.xml \
+    vendor.amlogic.hardware.screencontrol@1.0.xml \
     ddrtest \
-    esplayer \
-    hdcp_tx22 \
-    android.hardware.bluetooth@1.0-service-droidlogic \
-    android.hardware.drm@1.4-service.widevine \
-    android.hardware.dumpstate@1.1-service.droidlogic \
-    android.hardware.graphics.allocator@4.0-service \
-    android.hardware.graphics.composer@2.4-service.droidlogic \
+    android.hardware.audio.service-droidlogic \
+    android.hardware.bluetooth@1.1-service-droidlogic \
+    android.hardware.dumpstate-service.droidlogic \
+    android.hardware.gatekeeper-service.amlogic \
+    android.hardware.graphics.allocator-service \
+    android.hardware.graphics.composer@3.2-service.droidlogic \
+    android.hardware.media.c2@1.2-service \
     android.hardware.memtrack-service.droidlogic \
-    android.hardware.thermal@2.0-service.droidlogic \
-    android.hardware.usb.gadget@1.2-service.droidlogic \
+    android.hardware.thermal-service.droidlogic \
+    android.hardware.tv.hdmi.cec-service.droidlogic \
+    android.hardware.tv.hdmi.connection-service.droidlogic \
+    android.hardware.usb-service.droidlogic \
+    android.hardware.usb.gadget-service.droidlogic \
+    modules_load \
     remotecfg \
-    systemcontrol
+    resmanload \
+    screencatch \
+    screencontrol \
+    systemcontrol \
+    tee-supplicant \
+    tee_hdcp \
+    tee_key_inject \
+    tee_preload_fw \
+    tee_provision \
+    tspacktest
 
 PRODUCT_PACKAGES += \
     vendor_lib_hw_vulkan_amlogic_so
