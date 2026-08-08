@@ -1,6 +1,6 @@
 on early-init
     write /sys/module/firmware_class/parameters/path "/vendor/lib/firmware/"
-    start modules_load
+    exec_start modules_load
 
 service modules_load /vendor/bin/modules_load
     class main

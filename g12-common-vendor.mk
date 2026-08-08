@@ -17,7 +17,6 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.audio.service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.amlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.allocator-V2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-V2-service.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.composer@3.2-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@3.2-service.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-service.rc \
@@ -36,10 +35,6 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/screencontrol.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/screencontrol.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/sysfs_permissions.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sysfs_permissions.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/systemcontrol.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/systemcontrol.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_hdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_hdcp.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_key_inject.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_key_inject.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_preload_fw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_preload_fw.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/thermal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/thermal.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller.txt \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller_2G.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller_2G.txt \
@@ -47,6 +42,10 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
     vendor/amlogic/g12-common/proprietary/vendor/etc/permissions/android.software.cant_save_state.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.cant_save_state.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/permissions/droidlogic.software.core.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/droidlogic.software.core.xml \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/remote.cfg \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.tab1:$(TARGET_COPY_OUT_VENDOR)/etc/remote.tab1 \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.tab2:$(TARGET_COPY_OUT_VENDOR)/etc/remote.tab2 \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/remote.tab3:$(TARGET_COPY_OUT_VENDOR)/etc/remote.tab3 \
     vendor/amlogic/g12-common/proprietary/vendor/etc/remote.txt:$(TARGET_COPY_OUT_VENDOR)/etc/remote.txt \
     vendor/amlogic/g12-common/proprietary/vendor/etc/resman.json:$(TARGET_COPY_OUT_VENDOR)/etc/resman.json \
     vendor/amlogic/g12-common/proprietary/vendor/etc/seccomp_policy/android.hardware.amlogic.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.amlogic.media.c2@1.2-extended-seccomp-policy \
@@ -80,11 +79,11 @@ PRODUCT_PACKAGES += \
     libadap_lcd \
     libadap_ld \
     libamaudioutils \
+    libamaudioutils_boot \
     libamgralloc_ext \
     libaml_hal_lcd \
     libaml_hal_ld \
     libamladecs \
-    libamlaiaudio \
     libamlaudiohal.7.0 \
     libamlaudiohal@7.0 \
     libamlaudiohal_deathhandler@7.0 \
@@ -98,6 +97,7 @@ PRODUCT_PACKAGES += \
     libcodec2_aml_video_decoder \
     libcodec2_aml_video_encoder \
     libdroidaudiospdif \
+    liberrormonitorclient \
     libfaad \
     libfbc \
     libge2d-2.0 \
@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     libmad \
     libmediahal_dmabufmanage \
     libmediahal_hardware_demux \
+    libmediahal_mediametrics \
     libmediahal_mediasync \
     libmediahal_passthrough \
     libmediahal_resman \
@@ -127,27 +128,25 @@ PRODUCT_PACKAGES += \
     libscreencontrolservice \
     libsonic_ext \
     libsystemcontrolservice \
-    libtee_load_video_fw \
     libteec \
     libvendor_c2common \
     libvendor_c2componentstore \
     libvideotunnel \
-    libaudiopreprocessing \
-    libbundlewrapper \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
-    libldnhncr \
-    libreverbwrapper \
-    libvisualizer \
+    libbalance \
+    libdpe \
+    libhpeqwrapper \
+    libms12v2dapwrapper \
+    libtreblebasswrapper \
+    libvirtualsurround \
+    libvirtualx \
     vendor.amlogic.display.meson_display_ipc@1.0 \
     vendor.amlogic.hardware.droidvold@1.0 \
+    vendor.amlogic.hardware.errormonitor@1.0 \
     vendor.amlogic.hardware.screencontrol@1.0 \
     vendor.amlogic.hardware.systemcontrol@1.0 \
     vendor.amlogic.hardware.systemcontrol@1.1 \
     vendor.amlogic.hardware.tvserver@1.0 \
     droidlogic.software.core \
-    android.hardware.gatekeeper-service.amlogic.xml \
     android.hardware.graphics.composer@3.2-service.droidlogic.xml \
     android.hardware.media.c2@1.2-service.xml \
     android.hardware.tv.hdmi.cec-service.droidlogic.xml \
@@ -165,7 +164,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service-droidlogic \
     android.hardware.bluetooth@1.1-service-droidlogic \
     android.hardware.dumpstate-service.droidlogic \
-    android.hardware.gatekeeper-service.amlogic \
     android.hardware.graphics.allocator-service \
     android.hardware.graphics.composer@3.2-service.droidlogic \
     android.hardware.media.c2@1.2-service \
@@ -181,11 +179,6 @@ PRODUCT_PACKAGES += \
     screencatch \
     screencontrol \
     systemcontrol \
-    tee-supplicant \
-    tee_hdcp \
-    tee_key_inject \
-    tee_preload_fw \
-    tee_provision \
     tspacktest
 
 PRODUCT_PACKAGES += \
