@@ -27,7 +27,6 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/bluetooth.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/bluetooth.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/dumpstate-default.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dumpstate-default.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/dvb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dvb.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/fs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fs.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/irblaster1.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/irblaster1.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/memtrack-amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack-amlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/modules_load.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/modules_load.rc \
@@ -58,15 +57,13 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/regulatory.db:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/regulatory.db \
     vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/regulatory.db.p7s:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/regulatory.db.p7s \
     vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/video/h264_enc.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/h264_enc.bin \
-    vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/video/video_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/video_ucode.bin \
-    vendor/amlogic/g12-common/proprietary/vendor_dlkm/lib/modules/amlogic_fbc_lib.ko:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/amlogic_fbc_lib.ko
+    vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/video/video_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/video_ucode.bin
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-resources-aidl \
     android.hardware.graphics.composer@2.2-resources-aidl \
     arm.graphics-V4-ndk \
     arm.graphics-V5-ndk \
-    libGLES_mali \
     android.hardware.graphics.allocator-V2-arm \
     android.hardware.graphics.mapper@4.0-impl-arm \
     audio.primary.amlogic \
@@ -146,6 +143,7 @@ PRODUCT_PACKAGES += \
     vendor.amlogic.hardware.systemcontrol@1.0 \
     vendor.amlogic.hardware.systemcontrol@1.1 \
     vendor.amlogic.hardware.tvserver@1.0 \
+    amlogic_fbc_lib \
     droidlogic.software.core \
     android.hardware.graphics.composer@3.2-service.droidlogic.xml \
     android.hardware.media.c2@1.2-service.xml \
@@ -180,6 +178,3 @@ PRODUCT_PACKAGES += \
     screencontrol \
     systemcontrol \
     tspacktest
-
-PRODUCT_PACKAGES += \
-    vendor_lib_hw_vulkan_amlogic_so
