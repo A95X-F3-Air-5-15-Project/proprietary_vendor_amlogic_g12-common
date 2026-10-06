@@ -6,17 +6,17 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/amlogic/g12-common
 
 PRODUCT_COPY_FILES += \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/auto_pairing.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/auto_pairing.conf \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/blacklist.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/blacklist.conf \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/bt_vendor_usb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_usb.conf \
+    $(if $(filter true,$(TARGET_USE_AIDL_BLUETOOTH_HAL)),,vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/auto_pairing.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/auto_pairing.conf) \
+    $(if $(filter true,$(TARGET_USE_AIDL_BLUETOOTH_HAL)),,vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/blacklist.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/blacklist.conf) \
+    $(if $(filter true,$(TARGET_USE_AIDL_BLUETOOTH_HAL)),,vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf) \
+    $(if $(filter true,$(TARGET_USE_AIDL_BLUETOOTH_HAL)),,vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/bt_vendor_usb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_usb.conf) \
     vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.audio.service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-droidlogic.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc \
+    $(if $(filter true,$(TARGET_USE_AIDL_BLUETOOTH_HAL)),,vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-droidlogic.rc) \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.allocator-V2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator-V2-service.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.composer@3.2-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@3.2-service.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-service.rc \
@@ -24,7 +24,7 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.tv.hdmi.connection-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tv.hdmi.connection-service.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.usb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb-service.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.usb.gadget-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget-service.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/bluetooth.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/bluetooth.rc \
+    $(if $(filter true,$(TARGET_USE_AIDL_BLUETOOTH_HAL)),,vendor/amlogic/g12-common/proprietary/vendor/etc/init/bluetooth.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/bluetooth.rc) \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/dumpstate-default.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dumpstate-default.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/dvb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dvb.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/irblaster1.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/irblaster1.rc \
@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
     vendor.amlogic.hardware.screencontrol@1.0.xml \
     ddrtest \
     android.hardware.audio.service-droidlogic \
-    android.hardware.bluetooth@1.1-service-droidlogic \
+    $(if $(filter true,$(TARGET_USE_AIDL_BLUETOOTH_HAL)),,android.hardware.bluetooth@1.1-service-droidlogic) \
     android.hardware.dumpstate-service.droidlogic \
     android.hardware.graphics.allocator-service \
     android.hardware.graphics.composer@3.2-service.droidlogic \
