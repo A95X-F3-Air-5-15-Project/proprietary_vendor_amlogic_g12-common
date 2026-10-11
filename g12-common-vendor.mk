@@ -143,7 +143,6 @@ PRODUCT_PACKAGES += \
     vendor.amlogic.hardware.systemcontrol@1.0 \
     vendor.amlogic.hardware.systemcontrol@1.1 \
     vendor.amlogic.hardware.tvserver@1.0 \
-    amlogic_fbc_lib \
     droidlogic.software.core \
     android.hardware.graphics.composer@3.2-service.droidlogic.xml \
     android.hardware.media.c2@1.2-service.xml \

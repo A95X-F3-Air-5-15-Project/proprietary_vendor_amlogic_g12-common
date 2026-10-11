@@ -2615,15 +2615,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-prebuilt_lib {
-    name: "amlogic_fbc_lib",
-    owner: "amlogic",
-    src: "proprietary/vendor_dlkm/lib/modules/amlogic_fbc_lib.ko",
-    filename: "amlogic_fbc_lib.ko",
-    sub_dir: "modules",
-    vendor_dlkm_specific: true,
-}
-
 dex_import {
     name: "droidlogic.software.core",
     owner: "amlogic",

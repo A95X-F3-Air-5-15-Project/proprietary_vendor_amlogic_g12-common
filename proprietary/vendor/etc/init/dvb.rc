@@ -1,9 +1,3 @@
-on post-fs-data
-    insmod /vendor/lib/modules/aml_aucpu.ko
-    insmod /vendor/lib/modules/dvb_demux.ko
-    insmod /vendor/lib/modules/cimax-usb.ko
-    insmod /vendor/lib/modules/ci.ko
-
 #bootvideo play with demux1, so should set permission before post-fs-data
 on late-fs
     chmod 0666 /dev/dvb0.demux1
