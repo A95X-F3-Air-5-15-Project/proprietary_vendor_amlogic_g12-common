@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
     screen_source.amlogic \
     libAmlAudioOutPort \
     libPQTableLD \
+    lib_avc_vpcodec \
     libadap_lcd \
     libadap_ld \
     libamaudioutils \

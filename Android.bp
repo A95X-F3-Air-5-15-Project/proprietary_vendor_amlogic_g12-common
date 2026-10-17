@@ -466,6 +466,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "lib_avc_vpcodec",
+    owner: "amlogic",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/lib_avc_vpcodec.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libion",
+                "liblog",
+                "libm",
+                "libc++",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libadap_lcd",
     owner: "amlogic",
     strip: {
